@@ -39,7 +39,23 @@ body {
 }
 
 .avatar-monogram {
+    position: relative;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.avatar-monogram::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
     background: linear-gradient(135deg, #0b2545 0%, #1e6fd9 55%, #5ac8fa 100%);
+    z-index: 0;
+}
+
+.avatar-monogram img {
+    position: relative;
+    z-index: 1;
 }
 
 .nav-link:hover {
