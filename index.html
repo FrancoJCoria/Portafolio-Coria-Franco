@@ -12,21 +12,25 @@
 <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet"/>
 <link href="css/styles.css" rel="stylesheet"/>
 </head>
-<body class="font-body-md text-on-background">
+<body class="font-body-md text-on-background dark:text-dark-on-background dark:bg-dark-background">
 <!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant">
+<header class="fixed top-0 w-full z-50 bg-background/80 dark:bg-dark-background/80 backdrop-blur-xl border-b border-outline-variant dark:border-dark-outline-variant">
 <div class="flex justify-between items-center h-20 px-margin-mobile md:px-section-padding max-w-container-max mx-auto">
 <div class="flex items-center gap-2">
 <img alt="Logo de Franco Coria" class="h-20 w-20 md:h-18 md:w-18 object-contain" src="assets/logo.png"/>
 </div>
 <nav class="hidden md:flex items-center gap-8">
-<a class="nav-link font-body-md text-body-md pb-1 border-b-2 border-transparent text-on-surface-variant transition-colors duration-300" href="#home">Inicio</a>
-<a class="nav-link font-body-md text-body-md pb-1 border-b-2 border-transparent text-on-surface-variant transition-colors duration-300" href="#about">Sobre mí</a>
-<a class="nav-link font-body-md text-body-md pb-1 border-b-2 border-transparent text-on-surface-variant transition-colors duration-300" href="#skills">Habilidades</a>
-<a class="nav-link font-body-md text-body-md pb-1 border-b-2 border-transparent text-on-surface-variant transition-colors duration-300" href="#projects">Proyectos</a>
-<a class="nav-link font-body-md text-body-md pb-1 border-b-2 border-transparent text-on-surface-variant transition-colors duration-300" href="#contact">Contacto</a>
+<a class="nav-link font-body-md text-body-md pb-1 border-b-2 border-transparent text-on-surface-variant dark:text-dark-on-surface-variant transition-colors duration-300" href="#home">Inicio</a>
+<a class="nav-link font-body-md text-body-md pb-1 border-b-2 border-transparent text-on-surface-variant dark:text-dark-on-surface-variant transition-colors duration-300" href="#about">Sobre mí</a>
+<a class="nav-link font-body-md text-body-md pb-1 border-b-2 border-transparent text-on-surface-variant dark:text-dark-on-surface-variant transition-colors duration-300" href="#skills">Habilidades</a>
+<a class="nav-link font-body-md text-body-md pb-1 border-b-2 border-transparent text-on-surface-variant dark:text-dark-on-surface-variant transition-colors duration-300" href="#projects">Proyectos</a>
+<a class="nav-link font-body-md text-body-md pb-1 border-b-2 border-transparent text-on-surface-variant dark:text-dark-on-surface-variant transition-colors duration-300" href="#contact">Contacto</a>
 </nav>
-<a class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold hover:scale-105 active:scale-95 transition-all duration-200" href="#contact">
+<button id="theme-toggle" class="relative w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors" aria-label="Cambiar tema">
+    <span class="material-symbols-outlined icon-sun hidden">light_mode</span>
+    <span class="material-symbols-outlined icon-moon">dark_mode</span>
+</button>
+<a class="bg-primary-container dark:bg-dark-primary-container text-on-primary-container dark:text-dark-on-primary-container px-6 py-2 rounded-full font-bold hover:scale-105 active:scale-95 transition-all duration-200" href="#contact">
     Contactarme
 </a>
 </div>
@@ -41,29 +45,29 @@
 <div class="space-y-8 z-10">
 
 <div class="space-y-3">
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background dark:text-dark-on-background">
     Franco Javier Coria
 </h1>
 <p class="gradient-text font-display-lg text-2xl md:text-3xl lg:text-4xl font-bold">
     Desarrollador Backend
 </p>
 </div>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-dark-on-surface-variant max-w-lg">
     Estudiante de Desarrollo de Software con enfoque en el desarrollo backend. Trabajo principalmente con Node.js, Express y PostgreSQL, desarrollando aplicaciones web y APIs REST.
 </p>
 <div class="flex flex-wrap gap-4">
-<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold flex items-center gap-2 glow-hover transition-all group" href="#projects">
+<a class="bg-primary-container dark:bg-dark-primary-container text-on-primary-container dark:text-dark-on-primary-container px-8 py-4 rounded-xl font-bold flex items-center gap-2 glow-hover transition-all group" href="#projects">
     Ver Proyecto
     <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
-<a class="bg-transparent border border-outline-variant hover:border-primary/50 px-8 py-4 rounded-xl font-bold flex items-center gap-2 transition-all text-on-background" href="assets/CV_Franco_Javier_Coria.pdf" download="CV_Franco_Javier_Coria.pdf" target="_blank" rel="noopener noreferrer">
+<a class="bg-transparent border border-outline-variant dark:border-dark-outline-variant hover:border-primary/50 px-8 py-4 rounded-xl font-bold flex items-center gap-2 transition-all text-on-background dark:text-dark-on-background" href="assets/CV_Franco_Javier_Coria.pdf" download="CV_Franco_Javier_Coria.pdf" target="_blank" rel="noopener noreferrer">
     Descargar CV
     <span class="material-symbols-outlined">download</span>
 </a>
 </div>
 <div class="pt-8">
 <p class="font-label-mono text-label-mono text-outline mb-4">TECNOLOGÍAS QUE UTILIZO</p>
-<div class="flex flex-wrap gap-6 text-3xl text-on-surface-variant">
+<div class="flex flex-wrap gap-6 text-3xl text-on-surface-variant dark:text-dark-on-surface-variant">
 <i class="devicon-java-plain" title="Java"></i>
 <i class="devicon-nodejs-plain" title="Node.js"></i>
 <i class="devicon-express-original" title="Express"></i>
@@ -84,16 +88,16 @@
 </section>
 
 <!-- About Me Section -->
-<section class="bg-surface-container-lowest py-section-padding px-margin-mobile md:px-section-padding" id="about">
+<section class="bg-surface-container-lowest dark:bg-dark-surface-container-lowest py-section-padding px-margin-mobile md:px-section-padding" id="about">
 <div class="max-w-container-max mx-auto">
 <div class="flex flex-col lg:flex-row gap-20 items-center">
 <div class="lg:w-1/2 space-y-6">
 <span class="font-label-mono text-label-mono text-primary tracking-widest uppercase">Sobre mí</span>
-<h2 class="font-display-lg text-headline-md md:text-5xl text-on-background">Mi camino en <span class="gradient-text">el desarrollo de software</span></h2>
-<p class="text-body-lg text-on-surface-variant leading-relaxed">
+<h2 class="font-display-lg text-headline-md md:text-5xl text-on-background dark:text-dark-on-background">Mi camino en <span class="gradient-text">el desarrollo de software</span></h2>
+<p class="text-body-lg text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed">
     Soy estudiante de la Tecnicatura en Desarrollo de Software en la Universidad de La Punta, San Luis. Me encanta analizar problemas, buscar soluciones y mejorar continuamente mi forma de desarrollar software. Me interesan la arquitectura de software, el diseño de bases de datos y las buenas prácticas de desarrollo, porque considero que son la base para construir aplicaciones de calidad.
 </p>
-<p class="text-body-lg text-on-surface-variant leading-relaxed">
+<p class="text-body-lg text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed">
   Actualmente busco una oportunidad donde pueda aplicar mis conocimientos, aportar compromiso y continuar desarrollándome profesionalmente, colaborando en equipo y participando en proyectos reales.</p>
 <a class="inline-block bg-transparent border border-primary text-primary px-8 py-3 rounded-xl font-bold hover:bg-primary/10 transition-colors" href="https://www.linkedin.com/in/francojcoria" rel="noopener noreferrer" target="_blank">
     Ver LinkedIn
@@ -102,23 +106,23 @@
 <div class="lg:w-1/2 grid grid-cols-2 gap-6 w-full">
 <div class="glass-card p-8 rounded-3xl text-center">
 <span class="material-symbols-outlined text-4xl text-primary mb-4">calendar_today</span>
-<h3 class="text-3xl font-bold mb-1 text-on-background">2025</h3>
-<p class="text-on-surface-variant text-sm">Inicio de la carrera</p>
+<h3 class="text-3xl font-bold mb-1 text-on-background dark:text-dark-on-background">2025</h3>
+<p class="text-on-surface-variant dark:text-dark-on-surface-variant text-sm">Inicio de la carrera</p>
 </div>
 <div class="glass-card p-8 rounded-3xl text-center">
 <span class="material-symbols-outlined text-4xl text-tertiary mb-4">code_blocks</span>
-<h3 class="text-3xl font-bold mb-1 text-on-background">10+</h3>
-<p class="text-on-surface-variant text-sm">Modelos relacionales diseñados</p>
+<h3 class="text-3xl font-bold mb-1 text-on-background dark:text-dark-on-background">10+</h3>
+<p class="text-on-surface-variant dark:text-dark-on-surface-variant text-sm">Modelos relacionales diseñados</p>
 </div>
 <div class="glass-card p-8 rounded-3xl text-center">
 <span class="material-symbols-outlined text-4xl text-secondary mb-4">language</span>
-<h3 class="text-3xl font-bold mb-1 text-on-background">A2</h3>
-<p class="text-on-surface-variant text-sm">Inglés (en formación)</p>
+<h3 class="text-3xl font-bold mb-1 text-on-background dark:text-dark-on-background">A2</h3>
+<p class="text-on-surface-variant dark:text-dark-on-surface-variant text-sm">Inglés (en formación)</p>
 </div>
 <div class="glass-card p-8 rounded-3xl text-center">
 <span class="material-symbols-outlined text-4xl text-error mb-4">favorite</span>
-<h3 class="text-3xl font-bold mb-1 text-on-background">Backend</h3>
-<p class="text-on-surface-variant text-sm">Mi área de mayor interés</p>
+<h3 class="text-3xl font-bold mb-1 text-on-background dark:text-dark-on-background">Backend</h3>
+<p class="text-on-surface-variant dark:text-dark-on-surface-variant text-sm">Mi área de mayor interés</p>
 </div>
 </div>
 </div>
@@ -129,12 +133,12 @@
 <section class="py-section-padding px-margin-mobile md:px-section-padding max-w-container-max mx-auto" id="skills">
 <div class="text-center mb-16">
 <span class="font-label-mono text-label-mono text-primary tracking-widest uppercase">Mis habilidades técnicas</span>
-<h2 class="font-display-lg text-headline-md md:text-5xl mt-4 text-on-background">Tecnologías</h2>
+<h2 class="font-display-lg text-headline-md md:text-5xl mt-4 text-on-background dark:text-dark-on-background">Tecnologías</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- Backend -->
 <div class="glass-card p-8 rounded-[2rem] flex flex-col">
-<h3 class="text-xl font-bold text-center mb-8 text-on-background flex items-center justify-center gap-2">
+<h3 class="text-xl font-bold text-center mb-8 text-on-background dark:text-dark-on-background flex items-center justify-center gap-2">
 <span class="material-symbols-outlined text-primary">dns</span>
     Backend
 </h3>
@@ -147,7 +151,7 @@
 </div>
 <!-- Frontend -->
 <div class="glass-card p-8 rounded-[2rem] flex flex-col">
-<h3 class="text-xl font-bold text-center mb-8 text-on-background flex items-center justify-center gap-2">
+<h3 class="text-xl font-bold text-center mb-8 text-on-background dark:text-dark-on-background flex items-center justify-center gap-2">
 <span class="material-symbols-outlined text-tertiary">desktop_windows</span>
     Frontend
 </h3>
@@ -160,7 +164,7 @@
 </div>
 <!-- Bases de datos -->
 <div class="glass-card p-8 rounded-[2rem] flex flex-col">
-<h3 class="text-xl font-bold text-center mb-8 text-on-background flex items-center justify-center gap-2">
+<h3 class="text-xl font-bold text-center mb-8 text-on-background dark:text-dark-on-background flex items-center justify-center gap-2">
 <span class="material-symbols-outlined text-secondary">database</span>
     Bases de datos
 </h3>
@@ -171,26 +175,26 @@
 </div>
 <!-- Herramientas -->
 <div class="glass-card p-8 rounded-[2rem] flex flex-col">
-<h3 class="text-xl font-bold text-center mb-8 text-on-background flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-on-background">build</span>
+<h3 class="text-xl font-bold text-center mb-8 text-on-background dark:text-dark-on-background flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-on-background dark:text-dark-on-background">build</span>
     Herramientas
 </h3>
 <div class="grid grid-cols-2 gap-y-4 gap-x-4">
-<div class="flex items-center gap-3"><i class="devicon-git-plain text-2xl text-on-background"></i><span class="text-sm font-medium">Git</span></div>
-<div class="flex items-center gap-3"><i class="devicon-github-original text-2xl text-on-background"></i><span class="text-sm font-medium">GitHub</span></div>
-<div class="flex items-center gap-3"><span class="material-symbols-outlined text-on-background">table_chart</span><span class="text-sm font-medium">Sequelize</span></div>
+<div class="flex items-center gap-3"><i class="devicon-git-plain text-2xl text-on-background dark:text-dark-on-background"></i><span class="text-sm font-medium">Git</span></div>
+<div class="flex items-center gap-3"><i class="devicon-github-original text-2xl text-on-background dark:text-dark-on-background"></i><span class="text-sm font-medium">GitHub</span></div>
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-on-background dark:text-dark-on-background">table_chart</span><span class="text-sm font-medium">Sequelize</span></div>
 </div>
 </div>
 </div>
 </section>
 
 <!-- Projects Section -->
-<section class="py-section-padding px-margin-mobile md:px-section-padding bg-surface-container-low" id="projects">
+<section class="py-section-padding px-margin-mobile md:px-section-padding bg-surface-container-low dark:bg-dark-surface-container-low" id="projects">
 <div class="max-w-container-max mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
 <div>
 <span class="font-label-mono text-label-mono text-primary tracking-widest uppercase">Proyectos</span>
-<h2 class="font-display-lg text-headline-md md:text-5xl mt-4 text-on-background">Trabajo Destacado</h2>
+<h2 class="font-display-lg text-headline-md md:text-5xl mt-4 text-on-background dark:text-dark-on-background">Trabajo Destacado</h2>
 </div>
 <a class="text-primary hover:underline font-bold flex items-center gap-2 mb-2" href="https://github.com/FrancoJCoria" rel="noopener noreferrer" target="_blank">
     Ver GitHub <span class="material-symbols-outlined">north_east</span>
@@ -199,8 +203,8 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Project Card 1: Fotaza 2 (real) -->
 <div class="glass-card group rounded-[2rem] overflow-hidden flex flex-col h-full">
-<div class="h-64 overflow-hidden relative flex items-center justify-center bg-gradient-to-br from-primary-container to-primary">
-<span class="material-symbols-outlined text-white" style="font-size: 96px;" aria-hidden="true">photo_camera</span>
+<div class="h-80 overflow-hidden relative flex items-center justify-center p-4">
+<img src="assets/img-fotaza.png" alt="Fotaza 2 - Mockup de la aplicación" class="w-full h-full object-contain" />
 </div>
 <div class="p-8 flex-1 flex flex-col">
 <div class="flex gap-2 mb-4 flex-wrap">
@@ -208,8 +212,8 @@
 <span class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded font-bold uppercase">Express 5</span>
 <span class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded font-bold uppercase">PostgreSQL</span>
 </div>
-<h3 class="text-2xl font-bold mb-3 text-on-background">Fotaza 2</h3>
-<p class="text-on-surface-variant text-sm mb-6 flex-1">
+<h3 class="text-2xl font-bold mb-3 text-on-background dark:text-dark-on-background">Fotaza 2</h3>
+<p class="text-on-surface-variant dark:text-dark-on-surface-variant text-sm mb-6 flex-1">
     Aplicación web full-stack de comunidad fotográfica con arquitectura MVC: permite almacenar, compartir, buscar y vender fotografías en línea. Base de datos relacional con más de 10 modelos en Sequelize ORM (usuarios, publicaciones, colecciones, comentarios y mensajes), autenticación con Express Session y bcrypt, sistema de moderación de contenidos y mensajería privada para compraventa de imágenes. Renderizado del lado del servidor con Pug.
 </p>
 <div class="flex gap-4">
@@ -221,30 +225,30 @@
 </div>
 <!-- Project Card 2: Próximamente -->
 <div class="glass-card is-muted rounded-[2rem] overflow-hidden flex flex-col h-full opacity-70">
-<div class="h-64 overflow-hidden relative flex items-center justify-center bg-surface-container">
-<span class="material-symbols-outlined text-outline" style="font-size: 72px;" aria-hidden="true">hourglass_empty</span>
+<div class="h-64 overflow-hidden relative flex items-center justify-center bg-surface-container dark:bg-dark-surface-container">
+<span class="material-symbols-outlined text-outline dark:text-dark-outline" style="font-size: 72px;" aria-hidden="true">hourglass_empty</span>
 </div>
 <div class="p-8 flex-1 flex flex-col">
 <div class="flex gap-2 mb-4">
-<span class="bg-surface-container-high text-outline text-[10px] px-2 py-1 rounded font-bold uppercase">Próximamente</span>
+<span class="bg-surface-container-high dark:bg-dark-surface-container-high text-outline dark:text-dark-outline text-[10px] px-2 py-1 rounded font-bold uppercase">Próximamente</span>
 </div>
-<h3 class="text-2xl font-bold mb-3 text-on-background">Nuevo proyecto en camino</h3>
-<p class="text-on-surface-variant text-sm mb-6 flex-1">
+<h3 class="text-2xl font-bold mb-3 text-on-background dark:text-dark-on-background">Nuevo proyecto en camino</h3>
+<p class="text-on-surface-variant dark:text-dark-on-surface-variant text-sm mb-6 flex-1">
     Estoy trabajando en un nuevo proyecto backend. Volvé pronto para ver los detalles.
 </p>
 </div>
 </div>
 <!-- Project Card 3: Próximamente -->
 <div class="glass-card is-muted rounded-[2rem] overflow-hidden flex flex-col h-full opacity-70">
-<div class="h-64 overflow-hidden relative flex items-center justify-center bg-surface-container">
-<span class="material-symbols-outlined text-outline" style="font-size: 72px;" aria-hidden="true">hourglass_empty</span>
+<div class="h-64 overflow-hidden relative flex items-center justify-center bg-surface-container dark:bg-dark-surface-container">
+<span class="material-symbols-outlined text-outline dark:text-dark-outline" style="font-size: 72px;" aria-hidden="true">hourglass_empty</span>
 </div>
 <div class="p-8 flex-1 flex flex-col">
 <div class="flex gap-2 mb-4">
-<span class="bg-surface-container-high text-outline text-[10px] px-2 py-1 rounded font-bold uppercase">Próximamente</span>
+<span class="bg-surface-container-high dark:bg-dark-surface-container-high text-outline dark:text-dark-outline text-[10px] px-2 py-1 rounded font-bold uppercase">Próximamente</span>
 </div>
-<h3 class="text-2xl font-bold mb-3 text-on-background">Nuevo proyecto en camino</h3>
-<p class="text-on-surface-variant text-sm mb-6 flex-1">
+<h3 class="text-2xl font-bold mb-3 text-on-background dark:text-dark-on-background">Nuevo proyecto en camino</h3>
+<p class="text-on-surface-variant dark:text-dark-on-surface-variant text-sm mb-6 flex-1">
     Este espacio está reservado para mi próximo proyecto. ¡Seguí mi GitHub para novedades!
 </p>
 </div>
@@ -260,8 +264,8 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
 <div class="space-y-8">
 <span class="font-label-mono text-label-mono text-primary tracking-widest uppercase">Hablemos</span>
-<h2 class="font-display-lg text-headline-md md:text-5xl text-on-background">Busco mi primera oportunidad <span class="gradient-text">como Desarrollador Backend</span></h2>
-<p class="text-body-lg text-on-surface-variant">
+<h2 class="font-display-lg text-headline-md md:text-5xl text-on-background dark:text-dark-on-background">Busco mi primera oportunidad <span class="gradient-text">como Desarrollador Backend</span></h2>
+<p class="text-body-lg text-on-surface-variant dark:text-dark-on-surface-variant">
     Estoy abierto a pasantías y proyectos colaborativos donde pueda seguir aprendiendo y aportando valor.
 </p>
 <div class="space-y-6 pt-4">
@@ -270,8 +274,8 @@
 <span class="material-symbols-outlined text-primary">mail</span>
 </div>
 <div>
-<p class="text-xs text-outline font-bold uppercase">Email</p>
-<p class="text-lg font-bold text-on-background">francojaviercoria2@gmail.com</p>
+<p class="text-xs text-outline dark:text-dark-outline font-bold uppercase">Email</p>
+<p class="text-lg font-bold text-on-background dark:text-dark-on-background">francojaviercoria2@gmail.com</p>
 </div>
 </div>
 <div class="flex items-center gap-6 p-4 glass-card rounded-2xl">
@@ -279,19 +283,19 @@
 <span class="material-symbols-outlined text-secondary">location_on</span>
 </div>
 <div>
-<p class="text-xs text-outline font-bold uppercase">Ubicación</p>
-<p class="text-lg font-bold text-on-background">San Luis, Argentina</p>
+<p class="text-xs text-outline dark:text-dark-outline font-bold uppercase">Ubicación</p>
+<p class="text-lg font-bold text-on-background dark:text-dark-on-background">San Luis, Argentina</p>
 </div>
 </div>
 </div>
 <div class="flex gap-4 pt-6">
-<a class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all text-on-background" href="https://github.com/FrancoJCoria" rel="noopener noreferrer" target="_blank" aria-label="GitHub">
+<a class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all text-on-background dark:text-dark-on-background" href="https://github.com/FrancoJCoria" rel="noopener noreferrer" target="_blank" aria-label="GitHub">
 <i class="devicon-github-original text-xl"></i>
 </a>
-<a class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all text-on-background" href="https://www.linkedin.com/in/francojcoria" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
+<a class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all text-on-background dark:text-dark-on-background" href="https://www.linkedin.com/in/francojcoria" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
 <i class="devicon-linkedin-plain text-xl"></i>
 </a>
-<a class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all text-on-background" href="mailto:francojaviercoria2@gmail.com" aria-label="Email">
+<a class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all text-on-background dark:text-dark-on-background" href="mailto:francojaviercoria2@gmail.com" aria-label="Email">
 <span class="material-symbols-outlined">mail</span>
 </a>
 </div>
@@ -300,23 +304,23 @@
 <form class="space-y-6" id="contact-form">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
-<label class="text-sm font-bold text-outline" for="name">Tu nombre</label>
-<input class="w-full bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-xl py-4 px-6 text-on-surface" id="name" name="name" placeholder="Juan Pérez" type="text"/>
+<label class="text-sm font-bold text-outline dark:text-dark-outline" for="name">Tu nombre</label>
+<input class="w-full bg-surface-container dark:bg-dark-surface-container border-none focus:ring-2 focus:ring-primary rounded-xl py-4 px-6 text-on-surface dark:text-dark-on-surface" id="name" name="name" placeholder="Juan Pérez" type="text"/>
 </div>
 <div class="space-y-2">
-<label class="text-sm font-bold text-outline" for="email">Correo electrónico</label>
-<input class="w-full bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-xl py-4 px-6 text-on-surface" id="email" name="email" placeholder="juan@ejemplo.com" type="email"/>
+<label class="text-sm font-bold text-outline dark:text-dark-outline" for="email">Correo electrónico</label>
+<input class="w-full bg-surface-container dark:bg-dark-surface-container border-none focus:ring-2 focus:ring-primary rounded-xl py-4 px-6 text-on-surface dark:text-dark-on-surface" id="email" name="email" placeholder="juan@ejemplo.com" type="email"/>
 </div>
 </div>
 <div class="space-y-2">
-<label class="text-sm font-bold text-outline" for="subject">Asunto</label>
-<input class="w-full bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-xl py-4 px-6 text-on-surface" id="subject" name="subject" placeholder="Oportunidad laboral" type="text"/>
+<label class="text-sm font-bold text-outline dark:text-dark-outline" for="subject">Asunto</label>
+<input class="w-full bg-surface-container dark:bg-dark-surface-container border-none focus:ring-2 focus:ring-primary rounded-xl py-4 px-6 text-on-surface dark:text-dark-on-surface" id="subject" name="subject" placeholder="Oportunidad laboral" type="text"/>
 </div>
 <div class="space-y-2">
-<label class="text-sm font-bold text-outline" for="message">Tu mensaje</label>
-<textarea class="w-full bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-xl py-4 px-6 text-on-surface" id="message" name="message" placeholder="Contame sobre la oportunidad..." rows="4"></textarea>
+<label class="text-sm font-bold text-outline dark:text-dark-outline" for="message">Tu mensaje</label>
+<textarea class="w-full bg-surface-container dark:bg-dark-surface-container border-none focus:ring-2 focus:ring-primary rounded-xl py-4 px-6 text-on-surface dark:text-dark-on-surface" id="message" name="message" placeholder="Contame sobre la oportunidad..." rows="4"></textarea>
 </div>
-<button class="w-full bg-primary-container text-on-primary-container py-5 rounded-xl font-bold text-lg hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2" type="submit">
+<button class="w-full bg-primary-container dark:bg-dark-primary-container text-on-primary-container dark:text-dark-on-primary-container py-5 rounded-xl font-bold text-lg hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2" type="submit">
     Enviar mensaje <span class="material-symbols-outlined">send</span>
 </button>
 </form>
@@ -327,22 +331,22 @@
 </main>
 
 <!-- Footer -->
-<footer class="bg-surface-container-low border-t border-outline-variant w-full py-stack-lg">
+<footer class="bg-surface-container-low dark:bg-dark-surface-container-low border-t border-outline-variant dark:border-dark-outline-variant w-full py-stack-lg">
 <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-section-padding max-w-container-max mx-auto gap-8">
 <div class="flex items-center gap-2">
 <img alt="Logo de Franco Coria" class="h-20 w-20 object-contain" src="assets/logo.png"/>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant order-last md:order-none">
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-dark-on-surface-variant order-last md:order-none">
     © 2026 Franco Javier Coria. Todos los derechos reservados.
 </p>
 <div class="flex gap-8">
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/FrancoJCoria" rel="noopener noreferrer" target="_blank" aria-label="GitHub">
+<a class="text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary transition-colors" href="https://github.com/FrancoJCoria" rel="noopener noreferrer" target="_blank" aria-label="GitHub">
 <i class="devicon-github-original text-xl"></i>
 </a>
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/in/francojcoria" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
+<a class="text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/in/francojcoria" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
 <i class="devicon-linkedin-plain text-xl"></i>
 </a>
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:francojaviercoria2@gmail.com" aria-label="Email">
+<a class="text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary transition-colors" href="mailto:francojaviercoria2@gmail.com" aria-label="Email">
 <span class="material-symbols-outlined">mail</span>
 </a>
 </div>

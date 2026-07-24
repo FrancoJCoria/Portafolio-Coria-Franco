@@ -62,7 +62,50 @@ tailwind.config = {
                 error: "#DC2626",
                 "on-error": "#ffffff",
                 "error-container": "#FEE2E2",
-                "on-error-container": "#7F1D1D"
+                "on-error-container": "#7F1D1D",
+
+                dark: {
+                    "tertiary": "#5DC5E8",
+                    "on-tertiary": "#003544",
+                    "tertiary-container": "#0B4B66",
+                    "on-tertiary-container": "#C0EEFF",
+
+                    "primary": "#8FC4FF",
+                    "on-primary": "#003060",
+                    "primary-container": "#1E6FD9",
+                    "on-primary-container": "#DCEBFC",
+
+                    "secondary": "#7DD4FF",
+                    "on-secondary": "#003544",
+                    "secondary-container": "#004D66",
+                    "on-secondary-container": "#E4F6FF",
+
+                    "outline-variant": "#1c3050",
+                    "outline": "#5a7090",
+
+                    "surface-container-highest": "#2a3f5c",
+                    "surface-container-high": "#1c3050",
+                    "surface-container": "#162740",
+                    "surface-container-low": "#0f1d32",
+                    "surface-container-lowest": "#0a1628",
+                    "surface-variant": "#162740",
+                    "surface-dim": "#0a1628",
+                    "surface-bright": "#1c3050",
+                    "surface": "#0f1d32",
+                    "on-surface": "#e2eaf4",
+                    "on-surface-variant": "#8e9eb5",
+
+                    "on-background": "#e2eaf4",
+                    "background": "#0a1628",
+
+                    "inverse-surface": "#e2eaf4",
+                    "inverse-on-surface": "#0a1628",
+
+                    "error": "#FFB4AB",
+                    "on-error": "#690005",
+                    "error-container": "#93000A",
+                    "on-error-container": "#FFDAD6"
+                }
             },
             borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
             spacing: { "stack-md": "24px", "section-padding": "120px", gutter: "24px", "stack-sm": "8px", "margin-mobile": "20px", "stack-lg": "64px", "container-max": "1200px" },
@@ -91,6 +134,7 @@ tailwind.config = {
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initDarkMode();
     initSmoothScroll();
     initScrollReveal();
     initContactForm();
@@ -169,5 +213,38 @@ function initContactForm() {
         e.preventDefault();
         alert('¡Gracias por tu mensaje! Este formulario es una demo — conectalo a un backend o a un servicio de formularios para recibir mensajes reales.');
         contactForm.reset();
+    });
+}
+
+/**
+ * Inicializa el modo oscuro: lee la preferencia guardada, respeta la
+ * preferencia del sistema si no hay nada guardado, y configura el toggle.
+ */
+function initDarkMode() {
+    const toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+
+    const sunIcon = toggle.querySelector('.icon-sun');
+    const moonIcon = toggle.querySelector('.icon-moon');
+
+    function applyTheme(isDark) {
+        document.documentElement.classList.toggle('dark', isDark);
+        if (sunIcon) sunIcon.classList.toggle('hidden', !isDark);
+        if (moonIcon) moonIcon.classList.toggle('hidden', isDark);
+    }
+
+    function getPreferredTheme() {
+        const stored = localStorage.getItem('theme');
+        if (stored) return stored === 'dark';
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+
+    applyTheme(getPreferredTheme());
+
+    toggle.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        const next = !isDark;
+        applyTheme(next);
+        localStorage.setItem('theme', next ? 'dark' : 'light');
     });
 }
