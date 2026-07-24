@@ -202,17 +202,38 @@ function initNavActiveState() {
 }
 
 /**
- * Intercepta el envío del formulario de contacto (no hay backend conectado)
- * y muestra una confirmación de demo al usuario.
+ * Envía el formulario de contacto a Formspree y muestra feedback al usuario.
  */
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
     if (!contactForm) return;
 
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        alert('¡Gracias por tu mensaje! Este formulario es una demo — conectalo a un backend o a un servicio de formularios para recibir mensajes reales.');
-        contactForm.reset();
+        const btn = contactForm.querySelector('button[type="submit"]');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = 'Enviando...';
+        btn.disabled = true;
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                alert('¡Mensaje enviado! Te voy a responder a la brevedad.');
+                contactForm.reset();
+            } else {
+                alert('Hubo un error al enviar. Intentá de nuevo o escribime directamente por email.');
+            }
+        } catch {
+            alert('Error de conexión. Verificá tu internet y intentá de nuevo.');
+        } finally {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        }
     });
 }
 
